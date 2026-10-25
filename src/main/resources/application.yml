@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: student-management-system
+  datasource:
+    url: jdbc:h2:mem:schooldb;MODE=MySQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+server:
+  port: 8080
